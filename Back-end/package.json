@@ -1,0 +1,28 @@
+{
+  "name": "pokemon_api",
+  "version": "1.0.0",
+  "description": "back-end of the pokedex app",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HericMendez/Pokedex_React_Node.git"
+  },
+  "author": "Heric Mendes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HericMendez/Pokedex_React_Node/issues"
+  },
+  "homepage": "https://github.com/HericMendez/Pokedex_React_Node#readme"
+}

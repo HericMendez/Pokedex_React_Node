@@ -49,7 +49,7 @@ module.exports = (app) => {
     manipulaDados.altera(id, patchedValues, res);
   });
 
-  //Apafa os dados da id do pokémon cadastrado (Rota DELETE):
+  //Apaga os dados da id do pokémon cadastrado (Rota DELETE):
   app.delete("/home/:id", (req, res) => {
     const id = parseInt(req.params.id);
     manipulaDados.deleta(id, res);

@@ -1,16 +1,5 @@
 const types = [
   {
-    type: ["None"],
-
-    superEffective: ["None"],
-    notVeryEffective: ["None"],
-    noEffect:["None"],
-
-    resist: ["None"],
-    weak: ["None"],
-    immune: ["None"]
-  },
-  {
     type: ["Normal"],
 
     superEffective: [],

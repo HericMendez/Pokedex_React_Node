@@ -16,17 +16,16 @@ const attributes = (obj) => {
     immune: []
   };
     
-
     //Formata o array e o transforma em string
-    const format = (variable) =>{
+    const format = (array) =>{
       let formatted;
       
-      if(variable == "" || variable.length == 0 ){
-        formatted ="None"
+      if(array.length == 0 || array == ""){
+        formatted =  array[0]="None"
         //Se o array for vazio ou undefined, substitui por "None"
       }
       else{
-        formatted =  [...new Set(variable)]
+        formatted =  [...new Set(array)]
         /*Remove os valores duplicados se o tamanho do array for 
         maior ou igual a 1*/
 
@@ -38,7 +37,7 @@ const attributes = (obj) => {
     function pad(num, size) {
       num = num.toString();
       while (num.length < size) num = "0" + num;
-      return num;
+      return "#"+ num;
     }
    
 
@@ -50,8 +49,7 @@ const attributes = (obj) => {
             if(obj.number!=undefined) newType.number = pad(obj.number, 3);
             newType.name = obj.name;
             
-            newType.type.push(obj.type[n])
-
+            newType.type.push(obj.type[n]);
             newType.ability = obj.ability;
             
             if(obj.height!=undefined) newType.height = obj.height.toFixed(1) + "m";
@@ -68,15 +66,13 @@ const attributes = (obj) => {
 
             newType.description = obj.description;
 
+            
         }
 
       }
     });
 
-    if(newType.name == "" || newType.name == undefined){
-      newType.name = "No Name"
-    }
-
+    
     newType.type = format(newType.type);
     newType.ability = format(newType.ability);
     newType.superEffective = format(newType.superEffective);
@@ -85,16 +81,19 @@ const attributes = (obj) => {
     newType.resist = format(newType.resist);
     newType.weak = format(newType.weak);
     newType.immune = format(newType.immune);
+    
 
     if(newType.description == "" || newType.description == undefined){
       newType.description = "No Description"
     }
 
+
+
   return newType;
 };
 
-module.exports = attributes;
-/*
+
+
 const charmander = {
   number: 4,
   name: "Charmander",
@@ -106,7 +105,7 @@ const charmander = {
 
 
 };
-
+/*
 const bulbassaur = {
   number: 001,
   name: "Bulbassaur",
@@ -122,11 +121,8 @@ const squirtle = {
   type: ["Water"],
   ability:[""]
 };
-
-
+console.log(attributes(bulbassaur));
 
 console.log(attributes(squirtle));
-
-console.log(attributes(charmander));
-console.log(attributes(bulbassaur));
 */
+console.log(attributes(charmander));

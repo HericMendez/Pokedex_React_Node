@@ -5,7 +5,7 @@ const conexao = mysql.createConnection({
     port: '3306',
     user: 'root',
     password:'210591',
-    database:'pokedex',
+    database:'Pokedata',
 
 });
 

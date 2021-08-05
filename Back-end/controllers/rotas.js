@@ -1,7 +1,7 @@
 const ManipulaDados = require("../models/manipulaDados");
 const attributes = require("../data/attributes");
 const primeiraLetraMaiuscula = require("./formataString");
-const manipulaDados = require("../models/manipulaDados");
+
 //Torna primeira letra maiúscula e as demais minúsculas
 
 module.exports = (app) => {
@@ -15,7 +15,7 @@ module.exports = (app) => {
     const id = parseInt(req.params.id);
     ManipulaDados.buscaId(id, res);
   });
-
+/*
   //Busca pokémons pelo nome (Rota GET):
   app.get("/pokemon/:name", (req, res) => {
     const name = req.params.name;
@@ -23,6 +23,7 @@ module.exports = (app) => {
     nameCap = primeiraLetraMaiuscula(name);
     ManipulaDados.buscaNome(nameCap, res);
   });
+  */
 
   //Busca pokémons pelo número da Pokédex(Rota GET):
   app.get("/number/:number", (req, res) => {

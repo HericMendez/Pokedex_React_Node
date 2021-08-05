@@ -103,8 +103,6 @@ const charmander = {
   weight: 8.5,
   ability:["Blaze", "Solar Power(hidden)"],
   description:"Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail."
-
-
 };
 
 const bulbassaur = {

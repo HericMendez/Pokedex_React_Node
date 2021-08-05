@@ -10,6 +10,7 @@ const types = [
     weak: ["None"],
     immune: ["None"]
   },
+  
   {
     type: ["Normal"],
 
@@ -215,3 +216,5 @@ const types = [
 ];
 
 module.exports = types;
+
+

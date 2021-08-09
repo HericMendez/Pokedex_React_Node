@@ -11,34 +11,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
 
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="findPic.js"></script>
-
-   
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script>
-      
-      
-    </script>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 Dropdown
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -53,25 +64,37 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input id='fname' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button onclick="getContent();findPic()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input
+              id="fname"
+              class="form-control mr-sm-2"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              onclick="getContent();findPic()"
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="button"
+            >
+              Search
+            </button>
           </form>
         </div>
       </nav>
-      <div>
-        <section>
-        <div>
-          <img id='imageid' src="" alt="">
-        </div>
-        </div>
-            <div>
-              <span id='output'></span>
-        </div>
-           
-        </section>
+    </header>
+    
 
-
+    <section class="profile">
       
+      <div>
+        <img id="imageid" src="" alt="" />
         
+      </div>
+      <div class='toTheRight'>
+        <span id="output"></span>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="findPic.js"></script>
   </body>
 </html>

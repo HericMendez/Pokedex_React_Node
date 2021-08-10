@@ -3,19 +3,20 @@ const attributes = require("../data/attributes");
 const primeiraLetraMaiuscula = require("./formataString");
 
 //Torna primeira letra maiúscula e as demais minúsculas
-
+/* 
 module.exports = (app) => {
   //Lista todos os pokémons (Rota GET):
-  app.get("/home", (req, res) => {
+ 
+  app.get("/list/", (req, res) => {
     ManipulaDados.lista(res);
   });
 
   //Busca pokémons pelo número da id no banco de dados (Rota GET):
-  app.get("/home/:id", (req, res) => {
+  app.get("/list/:id", (req, res) => {
     const id = parseInt(req.params.id);
     ManipulaDados.buscaId(id, res);
   });
-/*
+
   //Busca pokémons pelo nome (Rota GET):
   app.get("/pokemon/:name", (req, res) => {
     const name = req.params.name;
@@ -23,7 +24,7 @@ module.exports = (app) => {
     nameCap = primeiraLetraMaiuscula(name);
     ManipulaDados.buscaNome(nameCap, res);
   });
-  */
+
 
   //Busca pokémons pelo número da Pokédex(Rota GET):
   app.get("/number/:number", (req, res) => {
@@ -32,7 +33,7 @@ module.exports = (app) => {
   });
 
   //Cadastra novos pokémons (Rota POST):
-  app.post("/home", (req, res) => {
+  app.post("/cadastro", (req, res) => {
     const pokemon = req.body;
     const atr = attributes(pokemon);
     const obj = { ...pokemon, ...atr };
@@ -43,7 +44,7 @@ module.exports = (app) => {
   });
 
   //Altera os dados da id do pokémon cadastrado (Rota PATCH):
-  app.patch("/home/:id", (req, res) => {
+  app.patch("/cadastro/:id", (req, res) => {
     const id = parseInt(req.params.id);
     const values = req.body;
     const patchedValues = attributes(values);
@@ -51,8 +52,9 @@ module.exports = (app) => {
   });
 
   //Apafa os dados da id do pokémon cadastrado (Rota DELETE):
-  app.delete("/home/:id", (req, res) => {
+  app.delete("/cadastro/:id", (req, res) => {
     const id = parseInt(req.params.id);
     manipulaDados.deleta(id, res);
   });
 };
+  */

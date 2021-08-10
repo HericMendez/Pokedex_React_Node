@@ -8,11 +8,14 @@ module.exports = (app) => {
 
 
   //Busca pokémons pelo nome (Rota GET):
-  app.get("/pokemon/:name", (req, res) => {
-    const name = req.params.name;
+  app.get("/list/", (req, res) => {
+    ManipulaDados.lista(res);
+  });
 
-    nameCap = primeiraLetraMaiuscula(name);
-    ManipulaDados.buscaNome(nameCap, res);
+  //Busca pokémons pelo número da id no banco de dados (Rota GET):
+  app.get("/list/:name", (req, res) => {
+    const id = parseInt(req.params.id);
+    ManipulaDados.buscaId(id, res);
   });
 
  

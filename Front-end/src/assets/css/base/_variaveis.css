@@ -1,0 +1,56 @@
+:root {
+    --fonte-familia-corpo: 'Montserrat', sans-serif;
+
+    --fonte-peso-input: 300;
+    --fonte-peso-cartao: 500;
+    --fonte-peso-categorias: 500;
+    --fonte-peso-menu-cabecalho-item: 500;
+
+    --fonte-tamanho-logo: 1.75rem;
+    --fonte-tamanho-cartao-titulo: 1.75rem;
+    --fonte-tamanho-cartao-post-titulo: 1.375rem;
+    --fonte-tamanho-input-label: 1.25rem;
+    --fonte-tamanho-botao: 1.375rem;
+    --fonte-tamanho-formulario-fieldset: 1.375rem;
+    --fonte-tamanho-tabela-cabecalho: 1.375rem;
+    --fonte-tamanho-titulo-pagina: 1.75rem;
+    --fonte-tamanho-menu-cabecalho-item: 1.2rem;
+    --fonte-tamanho-naoencontrado-texto: 1.25rem;
+
+    --cor-primaria: #0071ea;
+    --cor-secundaria: #d6eaff;
+    --cor-contraste-escuro: #4D4D4D;
+    --cor-contraste-claro: #fff;
+    --cor-divisao: #dadada;
+    --cor-aviso: #df2525;
+    --cor-sucesso: #46bb42;
+
+    --cor-tipo-Normal: #a9aa99;
+    --cor-tipo-Fire: #ff4949;
+    --cor-tipo-Water: #4d96fd;
+    --cor-tipo-Electric: #f8cb3f;
+    --cor-tipo-Grass: #7acf59;
+    --cor-tipo-Ice: #74ccfd;
+    --cor-tipo-Fighter: #b65246;
+    --cor-tipo-Poison: #a84f98;
+    --cor-tipo-Ground: #d9bc5a;
+
+    --cor-tipo-Flying: #8f95fd;
+    --cor-tipo-Psychic: #f94999;
+    --cor-tipo-Bug: #a8be2e;
+    --cor-tipo-Rock: #b8ab69;
+    --cor-tipo-Ghost: #6a62b9;
+    --cor-tipo-Dragon: #7d5dec;
+    --cor-tipo-Dark: #755545;
+    --cor-tipo-Steel: #aba9bb;
+    --cor-tipo-Fairy: #ec93ed;
+
+    --sombra: 0 5px 10px #55a6ff38;
+}
+
+@media(min-width: 800px) {
+    :root {
+        --fonte-tamanho-logo: 2.5rem;
+        --fonte-tamanho-menu-cabecalho-item: 1rem;
+    }
+}

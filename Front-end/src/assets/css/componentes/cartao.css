@@ -1,0 +1,160 @@
+.cartao {
+    background-color: var(--cor-contraste-claro);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    width: 100%;
+    max-width: 45rem;
+    padding: 1.75rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.toTheLeft{
+    
+    width: 150px;
+    height: 130px;
+    display: inline-block;
+    overflow: hidden;
+    
+
+}
+
+.toTheRight{
+    float: Right;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 1.8em;
+}
+
+
+.cartao__titulo {
+    font-size: var(--fonte-tamanho-cartao-titulo);
+    margin-bottom: 1rem;
+}
+
+.cartao__texto {
+    line-height: 1.2rem;
+    text-align: center;
+}
+
+.cartao__img {
+    height: inherit;
+    width: auto;
+    padding-right: 10px;
+    width: auto;
+    display: inline-block;
+}
+
+.cartao-post {
+    background-color: var(--cor-contraste-claro);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    width: 100%;
+    max-width: 25rem;
+    padding: 0.5rem ;
+    box-sizing: border-box;
+    margin-bottom: 2.25rem;
+    border-top: 1rem solid;
+    display: inline;
+}
+
+.cartao-post__titulo {
+    font-size: var(--fonte-tamanho-cartao-post-titulo);
+    font-weight: var(--fonte-peso-cartao);
+    margin-bottom: 1rem;
+}
+
+.cartao-post__meta {
+    line-height: 1.3rem;
+}
+
+
+
+.posts {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width: 900px) {
+    .posts {
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+/*Color Types*/
+
+.cartao-post--Normal {
+    border-color: var(--cor-tipo-Normal);
+}
+
+.cartao-post--Fire {
+    border-color: var(--cor-tipo-Fire);
+}
+
+.cartao-post--Water {
+    border-color: var(--cor-tipo-Water);
+}
+
+.cartao-post--Electric {
+    border-color: var(--cor-tipo-Electric);
+}
+
+.cartao-post--Grass {
+    border-color: var(--cor-tipo-Grass);
+}
+
+.cartao-post--Ice {
+    border-color: var(--cor-tipo-Ice);
+}
+
+.cartao-post--Fighter {
+    border-color: var(--cor-tipo-Fighter);
+}
+
+.cartao-post--Poison {
+    border-color: var(--cor-tipo-Poison);
+}
+
+.cartao-post--Ground {
+    border-color: var(--cor-tipo-Ground);
+}
+
+.cartao-post--Flying {
+    border-color: var(--cor-tipo-Flying);
+}
+
+.cartao-post--Psychic {
+    border-color: var(--cor-tipo-Psychic);
+}
+
+.cartao-post--Bug {
+    border-color: var(--cor-tipo-Bug);
+}
+
+.cartao-post--Rock {
+    border-color: var(--cor-tipo-Rock);
+}
+
+.cartao-post--Ghost {
+    border-color: var(--cor-tipo-Ghost);
+}
+
+.cartao-post--Dragon {
+    border-color: var(--cor-tipo-Dragon);
+}
+
+.cartao-post--Dark {
+    border-color: var(--cor-tipo-Dark);
+}
+
+.cartao-post--Steel {
+    border-color: var(--cor-tipo-Steel);
+}
+
+.cartao-post--Fairy {
+    border-color: var(--cor-tipo-Fairy);
+}

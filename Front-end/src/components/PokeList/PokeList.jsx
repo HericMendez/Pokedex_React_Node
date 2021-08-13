@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { busca } from "../../api/api";
 
-const PokeList = ({ url }) => {
+const PokeList = ({url }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -14,12 +14,19 @@ const PokeList = ({ url }) => {
 
     return type[0];
   };
+  
+if(  !Array.isArray(posts)){
+  console.log("deu ruim")
 
+  console.log(posts)
+
+}
 
 
   return (
     <section className="posts container">
-      {posts.map((post) => (
+      {posts.map((post, index) => (
+
         <Link
           className={`cartao-post cartao-post--${firstType(post.type)}`}
           to={`/pokemon/${post.nameid}`} >
@@ -32,7 +39,7 @@ const PokeList = ({ url }) => {
           </div>
 
           <div className="toTheRight">
-            <article key={post.id}>
+            <article key={index}>
               <h4 className="cartao-post__titulo">
                 #{post.number}
                 <br></br> {post.name}
@@ -45,6 +52,7 @@ const PokeList = ({ url }) => {
         </Link>
       ))}
     </section>
+
   );
 };
 

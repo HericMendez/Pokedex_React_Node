@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState, useEffect } from "react";
 import "./searchbar.css";
 import PokeList from "../PokeList/PokeList";
 
@@ -8,7 +8,7 @@ const SearchBar = ({send}) => {
 
 
   return (
-    <>
+    <main>
     <div className="container">
       <h2 className="titulo-pagina">Welcome to the Pokémon Center!</h2>
 
@@ -34,7 +34,7 @@ const SearchBar = ({send}) => {
         placeholder="Search Pokémon name..."
         
       />
-
+      <button   type="submit">Search</button>
 
       
     </form>
@@ -43,7 +43,7 @@ const SearchBar = ({send}) => {
 
     </div>
     <PokeList url={`/list/${name}`} />
-  </>
+  </main>
 
 
 

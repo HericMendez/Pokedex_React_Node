@@ -19,7 +19,7 @@ function App() {
     <NavBar />
     <Switch>
       <Route exact path='/'> <Home /> </Route>
-      <Route path='/list'> <List /> </Route>
+      <Route path='/list/'> <List /> </Route>
       <Route path='/about'> <Sobre /> </Route>
       <Route path='/pokemon/:name'> <PokemonProfile /> </Route>
      

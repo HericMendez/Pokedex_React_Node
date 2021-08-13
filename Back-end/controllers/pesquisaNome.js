@@ -12,7 +12,7 @@ module.exports = (app) => {
     const name = req.params.name;
 
     nameCap = primeiraLetraMaiuscula(name);
-    ManipulaDados.buscaNome(nameCap, res);
+    ManipulaDados.exibeNome(nameCap, res);
   });
 
  

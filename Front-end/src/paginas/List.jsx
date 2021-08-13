@@ -2,7 +2,7 @@ import React from 'react'
 import PokeList from '../components/PokeList/PokeList'
 import SearchBar from '../components/SearchBar/SarchBar'
 
-const Home = () => {
+const List = () => {
 
   return (
     <main>
@@ -14,4 +14,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default List

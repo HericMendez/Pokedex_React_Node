@@ -3,21 +3,21 @@ import { useParams, useHistory } from "react-router-dom"
 import '../assets/css/post.css'
 
 import { busca } from "../api/api"
+import SearchBar from "../components/SearchBar/SarchBar"
 
 const PokemonProfile = () =>{
-     
-     let history = useHistory();
-     const {name} = useParams();
-     const[post, setPost] = useState({}) 
+    
 
+     
+     const {name} = useParams();
+     const[post, setPost] = useState([]) 
+        let charmander = 'charmander'
      useEffect(()=>{
          busca(`/pokemon/${name}`, setPost)
-         .catch(()=>{
-            <p>cu</p>
-          })
-     }, [name, history])
-     console.log(history)
+         
+     }, [name])
 
+     console.log(post)
      return(
         <main className="container flex flex--centro">
             <article className='cartao post'>

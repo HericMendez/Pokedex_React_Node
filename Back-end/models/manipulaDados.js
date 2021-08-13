@@ -60,7 +60,7 @@ class ManipulaDados {
     });
   }
 
-  buscaNome(name, res) {
+  exibeNome(name, res) {
     const sql = `SELECT * FROM Pokedata.Pokedata WHERE name = "${name}";`;
 
     conexao.query(sql, (erro, results) => {
@@ -70,6 +70,37 @@ class ManipulaDados {
         console.log(erro);
       } else {
         res.status(200).json(name);
+        console.log(results);
+      }
+    });
+  }
+
+
+  buscaNome(name, res) {
+    const sql = `SELECT * FROM Pokedata.Pokedata WHERE name = "${name}";`;
+
+    conexao.query(sql, (erro, results) => {
+      const name = results;
+      if (erro) {
+        res.status(400).json(erro);
+        console.log(erro);
+      } else {
+        res.status(200).json(name);
+        console.log(results);
+      }
+    });
+  }
+
+  buscaNomeId(nameid, res) {
+    const sql = `SELECT * FROM Pokedata.Pokedata WHERE nameid = "${nameid}";`;
+
+    conexao.query(sql, (erro, results) => {
+      const nameid = results;
+      if (erro) {
+        res.status(400).json(erro);
+        console.log(erro);
+      } else {
+        res.status(200).json(nameid);
         console.log(results);
       }
     });

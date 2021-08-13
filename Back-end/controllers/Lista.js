@@ -12,11 +12,15 @@ module.exports = (app) => {
     ManipulaDados.lista(res);
   });
 
-  //Busca pokémons pelo número da id no banco de dados (Rota GET):
   app.get("/list/:name", (req, res) => {
-    const id = parseInt(req.params.id);
-    ManipulaDados.buscaId(id, res);
+    const name = req.params.name;
+    nameCap = primeiraLetraMaiuscula(name);
+    ManipulaDados.buscaNome(nameCap,res);
   });
+
+
+
+
 
  
 };

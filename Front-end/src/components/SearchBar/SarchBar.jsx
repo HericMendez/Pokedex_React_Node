@@ -10,7 +10,7 @@ const SearchBar = ({send}) => {
   return (
     <>
     <div className="container">
-      <h2 className="titulo-pagina">Welcome to the Pokémon Center!</h2>
+      <h2 className="titulo-pagina flex--centro">Welcome to the Pokémon Center!</h2>
 
       <h2 className="titulo-pagina">
       
@@ -42,7 +42,7 @@ const SearchBar = ({send}) => {
       </h2>
 
     </div>
-    <PokeList url={`/list/${name}`} />
+    <PokeList url={`/search/${name}`} />
   </>
 
 

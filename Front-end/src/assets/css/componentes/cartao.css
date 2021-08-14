@@ -11,7 +11,7 @@
 
 .toTheLeft{
     
-    width: 150px;
+    width: 130px;
     height: 130px;
     display: inline-block;
     overflow: hidden;
@@ -41,6 +41,7 @@
     height: inherit;
     width: auto;
     padding-right: 10px;
+    padding-left: 1.5em;
     width: auto;
     display: inline-block;
 }
@@ -53,9 +54,9 @@
     max-width: 25rem;
     padding: 0.5rem ;
     box-sizing: border-box;
-    margin-bottom: 2.25rem;
+    margin-bottom: 1rem;
     border-top: 1rem solid;
-    display: inline;
+    display: inline-block;
 }
 
 .cartao-post__titulo {
@@ -71,7 +72,7 @@
 
 
 .posts {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }

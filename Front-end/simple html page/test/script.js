@@ -3,7 +3,7 @@
 async function getContent(){
     let name = document.getElementById("fname").value;
     try{
-        const response = await fetch(`http://localhost:5000/pokedex/${name}`)
+        const response = await fetch(`http://localhost:5000/pokemon/${name}`)
        // console.log(response)
         const data = await response.json()
         console.log(data)

@@ -6,10 +6,10 @@ const primeiraLetraMaiuscula = require("./formataString");
 
 module.exports = (app) => {
 
-
-  //Busca pokémons pelo nome (Rota GET):
-  app.get("/list/", (req, res) => {
-    ManipulaDados.lista(res);
+  app.get("/search/:name", (req, res) => {
+    const name = req.params.name;
+    nameCap = primeiraLetraMaiuscula(name);
+    ManipulaDados.buscaNome(nameCap,res);
   });
 
  

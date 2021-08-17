@@ -120,6 +120,8 @@
     .cabecalho {
         grid-template-areas: "menu logo .";
         height: 4.5rem;
+        margin-top: 0px;
+        position: fixed;
     }
 
     .cabecalho-container {

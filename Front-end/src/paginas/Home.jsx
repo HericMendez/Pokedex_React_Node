@@ -1,45 +1,28 @@
-
 import PokeList from "../components/PokeList/PokeList";
-
 
 import SearchBar from "../components/SearchBar/SarchBar";
 
-function send(dados){
-
-
-
+function send(dados) {
   return dados;
-
 }
-
-const pokemon = "Blastoise"
 
 
 const Home = () => {
-
   return (
+    <main >
+     <div style={{marginBottom: "100px"}}>
+     <br/>
+    </div>
+    <div className="container">
+      <h2 className="titulo-pagina flex--centro">Welcome to the Pokémon Center!</h2>
 
-    /*
-        <main>
-      <div className="container">
-        <h2 className="titulo-pagina">Welcome to the Pokémon Center!</h2>
 
-        <h2 className="titulo-pagina">
-        
-
-         
-        </h2>
-
-      </div>
-      <PokeList url={`/list/${pokemon}`} />
-    </main>
-    */
-    <main>
-     <SearchBar />
+    </div>
+    <SearchBar />
     </main>
   );
 };
 
-console.log(send())
+console.log(send());
 
 export default Home;

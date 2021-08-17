@@ -30,7 +30,7 @@ const types = [
     notVeryEffective: ["Fire", "Water", "Rock", "Dragon"],
     noEffect: [],
 
-    resist: ["Fire", "Grass", "Ice", "Bug", "Steel"],
+    resist: ["Fire", "Grass", "Ice", "Bug", "Steel", "Fairy"],
     weak: ["Water", "Ground", "Rock"],
     immune: []
   },
@@ -87,24 +87,26 @@ const types = [
     type: ["Fighter"],
 
     superEffective: ["Normal", "Ice", "Rock", "Dark", "Steel"],
-    notVeryEffective: ["Poison", "Flying", "Psychic", "Bug"],
+    notVeryEffective: ["Poison", "Flying", "Psychic", "Bug", "Fairy"],
     noEffect: ["Ghost"],
 
     resist: ["Bug", "Rock", "Dark"],
-    weak: ["Flying", "Psychic"],
+    weak: ["Flying", "Psychic", "Fairy"],
     immune: []
   },
+  
   {
     type: ["Poison"],
 
-    superEffective: ["Grass"],
+    superEffective: ["Grass", "Fairy"],
     notVeryEffective: ["Poison", "Ground", "Rock", "Ghost"],
     noEffect: ["Steel"],
 
-    resist: ["Grass", "Fighter", "Poison", "Bug"],
+    resist: ["Grass", "Fighter", "Poison", "Bug", "Fairy"],
     weak: ["Ground", "Psychic"],
     immune: []
   },
+  
   {
     type: ["Ground"],
 
@@ -145,7 +147,7 @@ const types = [
     type: ["Bug"],
 
     superEffective: ["Grass", "Psychic", "Dark"],
-    notVeryEffective: ["Fire", "Fighter", "Poison", "Flying", "Ghost", "Steel"],
+    notVeryEffective: ["Fire", "Fighter", "Poison", "Flying", "Ghost", "Steel", "Fairy"],
     noEffect: [],
     
     resist: ["Grass", "Fighter", "Ground"],
@@ -182,10 +184,10 @@ const types = [
 
     superEffective: ["Dragon"],
     notVeryEffective: ["Steel"],
-    noEffect: [],
+    noEffect: ["Fairy"],
     
     resist: ["Fire", "Water", "Electric", "Grass"],
-    weak: ["Ice", "Dragon"],
+    weak: ["Ice", "Dragon", "Fairy"],
     immune: []
   },
 
@@ -193,18 +195,17 @@ const types = [
     type: ["Dark"],
 
     superEffective: ["Psychic", "Ghost"],
-    notVeryEffective: ["Fighter", "Dark"],
+    notVeryEffective: ["Fighter", "Dark", "Fairy"],
     noEffect: [],
-    
     resist: ["Ghost", "Dark"],
-    weak: ["Fighter", "Bug"],
+    weak: ["Fighter", "Bug", "Fairy"],
     immune: ["Psychic"]
   },
 
   {
     type: ["Steel"],
 
-    superEffective: ["Ice", "Rock"],
+    superEffective: ["Ice", "Rock", "Fairy"],
     notVeryEffective: ["Fire", "Water", "Electric", "Steel"],
     noEffect: [],
     
@@ -213,8 +214,18 @@ const types = [
             "Bug", "Rock", "Dragon", "Steel"],
     immune: ["Poison"]
   },
+  
+  {
+    type: ["Fairy"],
+
+    superEffective: ["Fighter", "Dragon", "Dark"],
+    notVeryEffective: ["Fire", "Poison", "Steel"],
+    noEffect: [],
+    
+    resist: ["Fighter", "Bug", "Dark"],
+    weak: ["Poison", "Steel"],
+    immune: ["Dragon"]
+  }
 ];
 
 module.exports = types;
-
-

@@ -16,7 +16,10 @@ function App() {
   return (
   <>
   <Router>
-    <NavBar />
+    <div style={{position:'absolute'}}>
+      <NavBar />
+    </div>
+    
     <Switch>
       <Route exact path='/'> <Home /> </Route>
       <Route path='/list/'> <List /> </Route>

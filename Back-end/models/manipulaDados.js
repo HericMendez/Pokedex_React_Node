@@ -16,6 +16,21 @@ class ManipulaDados {
     });
   }
 
+  vaiDireto(pokemon) {
+    const sql = "INSERT INTO Pokedata SET ?";
+
+    conexao.query(sql, pokemon, (erro, results) => {
+      if (erro) {
+
+        console.log(erro);
+      } else {
+
+        console.log(results);
+        console.log(pokemon);
+      }
+    });
+  }
+
   lista(res) {
     const sql = "SELECT * FROM Pokedata;";
 
@@ -25,7 +40,7 @@ class ManipulaDados {
         console.log(erro);
       } else {
         res.status(200).json(results);
-        console.log(results);
+
       }
     });
   }

@@ -6,7 +6,7 @@ const List = () => {
 
   return (
     <main>
-    <div className="container">
+           <div style={{marginBottom: "100px"}}>
      <br/>
     </div>
     <PokeList url={'/list/'} />

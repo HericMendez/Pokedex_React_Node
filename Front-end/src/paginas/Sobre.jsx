@@ -7,6 +7,9 @@ const Sobre = () => {
 
   return (
     <main>
+           <div style={{marginBottom: "80px"}}>
+     <br/>
+    </div>
       <div className="container">
         <h2 className="titulo-pagina flex--centro">Sobre o Projeto</h2>
       </div>

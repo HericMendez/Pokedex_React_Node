@@ -12,5 +12,6 @@ module.exports = (app) => {
     ManipulaDados.buscaNome(nameCap,res);
   });
 
+
  
 };

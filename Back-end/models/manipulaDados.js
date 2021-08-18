@@ -11,13 +11,13 @@ class ManipulaDados {
       } else {
         res.status(201).json(pokemon);
         console.log(results);
-        console.log(pokemon);
+
       }
     });
   }
 
   vaiDireto(pokemon) {
-    const sql = "INSERT INTO Pokedata SET ?";
+    const sql = "INSERT INTO  Pokedata SET ?";
 
     conexao.query(sql, pokemon, (erro, results) => {
       if (erro) {
@@ -75,6 +75,21 @@ class ManipulaDados {
     });
   }
 
+  buscaGen(gen, res) {
+    const sql = `SELECT * FROM Pokedata.Pokedata WHERE generation = "${gen}";`;
+
+    conexao.query(sql, (erro, results) => {
+      const gen = results;
+      if (erro) {
+        res.status(400).json(erro);
+        console.log(erro);
+      } else {
+        res.status(200).json(gen);
+
+      }
+    });
+  }
+
   exibeNome(name, res) {
     const sql = `SELECT * FROM Pokedata.Pokedata WHERE name = "${name}";`;
 
@@ -92,7 +107,7 @@ class ManipulaDados {
 
 
   buscaNome(name, res) {
-    const sql = `SELECT * FROM Pokedata.Pokedata WHERE name = "${name}";`;
+    const sql = `SELECT * FROM Pokedata.Pokedata WHERE name like '%${name}%';`;
 
     conexao.query(sql, (erro, results) => {
       const name = results;
@@ -101,7 +116,22 @@ class ManipulaDados {
         console.log(erro);
       } else {
         res.status(200).json(name);
-        console.log(results);
+
+      }
+    });
+  }
+
+  buscaTipo(type, res) {
+    const sql = `SELECT * FROM Pokedata.Pokedata WHERE type like '%${type}%';`;
+
+    conexao.query(sql, (erro, results) => {
+      const type = results;
+      if (erro) {
+        res.status(400).json(erro);
+        console.log(erro);
+      } else {
+        res.status(200).json(type);
+
       }
     });
   }

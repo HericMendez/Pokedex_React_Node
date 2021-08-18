@@ -42,6 +42,23 @@ body {
 	
 }
 
+.painel-destaque {
+	display: flex;
+	align-items: center;
+	font-family: var(--fonte-familia-titulo-pagina);
+	font-size: var(--fonte-tamanho-titulo-pagina);
+
+	height: fit-content;
+	margin-top: 0.5rem;
+	margin-bottom: 2rem;
+	
+}
+
+.painel-txt{
+	font-size: 20px;
+
+}
+
 @media(min-width: 800px) {
   .container {
 		padding-right: 2.5rem;

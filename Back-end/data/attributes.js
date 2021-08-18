@@ -14,6 +14,7 @@ const attributes = (obj) => {
     resist: [],
     weak: [],
     immune: []
+
   };
     
 

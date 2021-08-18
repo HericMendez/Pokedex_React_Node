@@ -7,10 +7,32 @@ const primeiraLetraMaiuscula = require("./formataString");
 module.exports = (app) => {
 
 
-  //Busca pokémons pelo nome (Rota GET):
+  //exibe todos os pokemons:):
   app.get("/list/", (req, res) => {
     ManipulaDados.lista(res);
+
+    
   });
+
+  app.get("/list/gen/:gen", (req, res) => {
+    const gen = req.params.gen;
+
+    ManipulaDados.buscaGen(gen,res);
+  });
+
+  app.get("/list/name/:name", (req, res) => {
+    const name = req.params.name;
+
+    ManipulaDados.buscaNome(name,res);
+  });
+
+  app.get("/list/type/:type", (req, res) => {
+    const type = req.params.type;
+
+    ManipulaDados.buscaTipo(type,res);
+  });
+
+  
 
  
 };

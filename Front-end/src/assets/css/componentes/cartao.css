@@ -14,7 +14,7 @@
     width: 130px;
     height: 130px;
     display: inline-block;
-    overflow: hidden;
+    overflow: none;
     
 
 }
@@ -67,6 +67,7 @@
 
 .cartao-post__meta {
     line-height: 1.3rem;
+    font-weight: 550;
 }
 
 

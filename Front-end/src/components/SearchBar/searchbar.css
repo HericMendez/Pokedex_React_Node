@@ -1,8 +1,22 @@
-.input-search{
+.input-form{
     align-items:center;
     margin: auto;
-    display: inline;
+    display: flex;
+    width: auto;
+    margin: 20px;
+    font-size: 0.8em;
     
 }
 
+.type-search{
+    display: inline;
+    width: 50%;
+    margin: 1em;
+}
+
+.input-search{
+    display: inline;
+    width: 90%;
+    margin: 1em;
+}
 

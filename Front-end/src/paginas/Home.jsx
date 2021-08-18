@@ -1,4 +1,4 @@
-import PokeList from "../components/PokeList/PokeList";
+
 
 import SearchBar from "../components/SearchBar/SarchBar";
 
@@ -14,7 +14,15 @@ const Home = () => {
      <br/>
     </div>
     <div className="container">
-      <h2 className="titulo-pagina flex--centro">Welcome to the Pokémon Center!</h2>
+      <div>
+       <h1 className="painel-destaque flex--centro">Welcome to the Pokémon Center!</h1>
+      </div>
+     
+      
+
+        
+      
+
 
 
     </div>

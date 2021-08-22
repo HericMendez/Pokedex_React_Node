@@ -16,9 +16,9 @@ function App() {
   return (
   <>
   <Router>
-    <div style={{position:'absolute'}}>
+
       <NavBar />
-    </div>
+
     
     <Switch>
       <Route exact path='/'> <Home /> </Route>

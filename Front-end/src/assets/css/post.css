@@ -1,3 +1,88 @@
 .post {
   margin-top: 1.25rem;
+  font-size: 20px;
+  
+}
+
+.imageid{
+	width: 100%;
+	height: auto;
+  overflow:visible;
+	padding: 10px; 
+  display: flex;
+
+
+}
+
+.half{
+  flex: 50%;
+}
+.bold{
+  font-weight: bold;
+}
+
+.fixOverlap{
+	margin-top: 12%;
+}
+
+.painel {
+
+  border-radius: 10px;
+
+  width: 100%;
+  max-width: fit-content;
+  padding-left: 2rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: justify;
+  font-size: 20px;
+}
+
+
+
+.info-geral {
+  line-height: 1.2rem;
+  text-align: justify;
+  padding-left: 25px;
+  padding-right: 10px;
+  line-height: normal;
+  
+
+  
+}
+
+
+table, th, td {
+  border: none;
+  border-collapse: collapse;
+  vertical-align: middle;
+  
+
+  
+}
+
+.center-txt{
+text-align: center;
+}
+
+th{
+  padding: 2px;
+  padding-right :10px;
+  text-align: right;
+  font-weight: bold;
+  width: 30%;
+}
+td {
+  padding: 5px;
+  padding-left:10px;
+  text-align: left;
+  width: 70%;
+}
+
+ul{
+  line-height: normal;
+  padding-left: 10px;
+  padding-right: 10px;
 }

@@ -5,7 +5,7 @@ async function getContent(){
       const response = await fetch(`http://localhost:5000/pokemon/${name}`)
      // console.log(response)
       const data = await response.json()
-      console.log(data)
+      //console.log(data)
       show(data)
       findPic(data.nameid)      
       
@@ -36,7 +36,7 @@ const findPic = (pic) => {
 
 
 function show(pokemon){
-    let species = '[insert species here]'
+
 
    let profile = ''//`<p>Name: ${pokemon.name}<br>  Type: ${pokemon.type}</p>` 
   

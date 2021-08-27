@@ -9,7 +9,7 @@ const Sobre = () => {
            <div style={{marginBottom: "80px"}}>
      <br/>
     </div>
-    <div className="container">
+    <div className="container post">
         <h2 className="titulo-pagina flex--centro">About the Project</h2>
       </div>
     <section className="container flex flex--centro">

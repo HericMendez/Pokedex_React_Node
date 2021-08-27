@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import "./searchbar.css";
-
+import { Link } from "react-router-dom";
 import PokeList from "../PokeList/PokeList";
 
 const SearchBar = () => {
@@ -13,9 +13,11 @@ const SearchBar = () => {
 
   const [clearBtn, setClearBtn] = useState("");
 
+  
 
 
-var hr = '<hr/>'
+
+
 
 
   return (
@@ -80,9 +82,13 @@ var hr = '<hr/>'
                 if (event.target.value != "") {
                   setResultMsg2(
                     //cartao-post--${firstType(post.type)}`
-                    `Showing results for ${event.target.value} type Pokémon`
-                  );
-                 
+        
+                    
+                    <p>Showing results for <a href="#typelist" style={{"color": `var(--cor-tipo-${event.target.value})`, textDecoration: "underline"}}>{event.target.value}-type</a> Pokémon</p>
+                     
+                    );
+
+                    console.log(event.target.value)
                 } else {
                   setResultMsg2("");
                 }
@@ -92,29 +98,29 @@ var hr = '<hr/>'
             <datalist id="types">
               <option default value="Normal " />
               <option name="fire" value="Fire" />
-              <option value="Water " />
-              <option value="Grass " />
-              <option value="Flying " />
-              <option value="Fighter " />
-              <option value="Poison " />
-              <option value="Electric " />
-              <option value="Ground " />
-              <option value="Rock " />
-              <option value="Psychic " />
-              <option value="Ice " />
-              <option value="Bug " />
-              <option value="Ghost " />
-              <option value="Steel " />
-              <option value="Dragon " />
-              <option value="Dark " />
-              <option value="Fairy " />
+              <option value="Water" />
+              <option value="Grass" />
+              <option value="Flying" />
+              <option value="Fighter" />
+              <option value="Poison" />
+              <option value="Electric" />
+              <option value="Ground" />
+              <option value="Rock" />
+              <option value="Psychic" />
+              <option value="Ice" />
+              <option value="Bug" />
+              <option value="Ghost" />
+              <option value="Steel" />
+              <option value="Dragon" />
+              <option value="Dark" />
+              <option value="Fairy" />
             </datalist>
           </form>
           
         </h2>
         <div className="container flex flex--centro" style={{marginTop: "-20px"}}>
-           <span className="cartao__texto ">
-        {resultMsg1}<br/><hr/>{resultMsg2} <br/>{clearBtn}
+           <span className="cartao__texto">
+       <p className="post">{resultMsg1}</p> <hr/>{resultMsg2} <br /> {clearBtn}
       </span>
         </div>
     
@@ -123,11 +129,19 @@ var hr = '<hr/>'
  
       <PokeList url={`/list/name/${name}`} />
       <br/>
+
+      
+      <p id="typelist"></p>
       <br/>
-      <br/>
-              
-      <PokeList url={`/list/type/${type}`} />
-      <br/>
+
+      <div  className="container flex flex--centro" style={{marginTop: "-20px"}}>
+
+           <span className="cartao__subtitulo post">
+{resultMsg2} <hr />
+      </span>
+        </div>
+      <PokeList  url={`/list/type/${type}`} />
+      
 
     </>
   );

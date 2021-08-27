@@ -39,7 +39,9 @@ body {
 	margin-top: 1.25rem;
 	margin-bottom: 2rem;
 }
-
+html {
+	scroll-behavior:smooth;
+  }
 .bold{
 	font-weight: bold;
   }

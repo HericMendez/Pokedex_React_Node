@@ -135,10 +135,12 @@
 
 .cartao-post--Grass {
     border-color: var(--cor-tipo-Grass);
+    
 }
 
 .cartao-post--Ice {
     border-color: var(--cor-tipo-Ice);
+    
 }
 
 .cartao-post--Fighter {

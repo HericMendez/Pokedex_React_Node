@@ -28,7 +28,7 @@ const NavBar = () => {
 
       </nav>
       
-      <div className="menu-cabecalho-background"></div>
+
     </header>
   )
 }

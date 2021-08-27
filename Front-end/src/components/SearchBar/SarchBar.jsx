@@ -43,7 +43,7 @@ const SearchBar = () => {
                 //setLink(`/search/${name}`);
 
                 setName(event.target.value);
-                setClearBtn( <button className="blue" onClick={()=>window.location.reload()}> Clear Results </button>)
+                setClearBtn( <button className="red" onClick={()=>window.location.reload()}> Clear Results </button>)
 
                 /*
                              if (event.target.value != "") {
@@ -77,14 +77,14 @@ const SearchBar = () => {
               value={type}
               onChange={(event) => {
                 setType(event.target.value);
-                setClearBtn( <button className="blue" onClick={()=>window.location.reload()}> Clear Results </button>)
+                setClearBtn( <button className="red" onClick={()=>window.location.reload()}> Clear Results </button>)
 
                 if (event.target.value != "") {
                   setResultMsg2(
                     //cartao-post--${firstType(post.type)}`
         
                     
-                    <p>Showing results for <a href="#typelist" style={{"color": `var(--cor-tipo-${event.target.value})`, textDecoration: "underline"}}>{event.target.value}-type</a> Pokémon</p>
+                    <p><span style={{"color": "snow"}}>Showing results for</span> <a href="#typelist" style={{"color": `var(--cor-tipo-${event.target.value})`, textDecoration: "underline"}}>{event.target.value}-type</a> <span style={{"color": "snow"}}> Pokémon</span></p>
                      
                     );
 
@@ -119,7 +119,7 @@ const SearchBar = () => {
           
         </h2>
         <div className="container flex flex--centro" style={{marginTop: "-20px"}}>
-           <span className="cartao__texto">
+           <span className="cartao__texto white">
        <p className="post">{resultMsg1}</p> <hr/>{resultMsg2} <br /> {clearBtn}
       </span>
         </div>
@@ -131,7 +131,7 @@ const SearchBar = () => {
       <br/>
 
       
-      <p id="typelist"></p>
+      <p className="white"id="typelist"></p>
       <br/>
 
       <div  className="container flex flex--centro" style={{marginTop: "-20px"}}>

@@ -25,7 +25,8 @@ function App() {
       <Route path='/list/'> <List /> </Route>
       <Route path='/about'> <Sobre /> </Route>
       <Route path='/pokemon/:name'> <PokemonProfile /> </Route>
-     
+
+      ml
       <Route> <Pagina404 />  </Route>
     
     </Switch>

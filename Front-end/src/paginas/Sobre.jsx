@@ -23,6 +23,8 @@ Pokédex-React-Node is a project developed for educational purposes, with the ob
           <p>
            <a className="red" target='_blank' rel='noreferrer' href='https://github.com/HericMendez/Pokedex_React_Node/tree/save-point'><strong>Link to the Github repository</strong></a>
           </p>
+          <br></br>
+  
          
 
         </article>

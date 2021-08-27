@@ -17,10 +17,11 @@
     --fonte-tamanho-menu-cabecalho-item: 1.2rem;
     --fonte-tamanho-naoencontrado-texto: 1.25rem;
 
-    --cor-primaria: #0071ea;
-    --cor-secundaria: #d6eaff;
+    --cor-primaria: #1D1D1D;
+    --cor-secundaria: #4D4D4D;
+    --cor-cabecalho: #CF291D;
     --cor-contraste-escuro: #4D4D4D;
-    --cor-contraste-claro: #fff;
+    --cor-contraste-claro: snow;
     --cor-divisao: #dadada;
     --cor-aviso: #df2525;
     --cor-sucesso: #46bb42;

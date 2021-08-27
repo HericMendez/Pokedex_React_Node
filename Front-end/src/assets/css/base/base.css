@@ -43,6 +43,7 @@ body {
   height: 4.75rem;
   margin-top: 1.25rem;
   margin-bottom: 2rem;
+  color: var(--cor-primaria)
 }
 html {
   scroll-behavior: smooth;

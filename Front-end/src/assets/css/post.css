@@ -19,6 +19,10 @@
 
 }
 
+.white{
+  color: snow;
+}
+
 .half{
   flex: 50%;
 }

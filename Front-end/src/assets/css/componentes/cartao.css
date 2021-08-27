@@ -49,12 +49,22 @@
   }
 
 .red{
-    color: red;
+    color: #CF291D;
 }
 
+
+
 .blue{
-    color: blue;
+    color: rgb(0, 131, 175);
 }
+
+.cartao__texto {
+    line-height: 1.2rem;
+    text-align: center;
+    padding: 15px;
+}
+
+
 
 .cartao__texto {
     line-height: 1.2rem;

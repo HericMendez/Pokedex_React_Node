@@ -1,78 +1,82 @@
 @import url(_reset.css);
 @import url(_variaveis.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Pacifico&display=swap");
 
 body {
-	background-color: var(--cor-secundaria);
-	color: var(--cor-contraste-escuro);
-	font-family: var(--fonte-familia-corpo);
+  background-color: var(--cor-secundaria);
+  color: var(--cor-contraste-escuro);
+  font-family: var(--fonte-familia-corpo);
 }
 
-.container { 
-	padding-right: 1rem;
-	padding-left: 1rem;
-	margin: auto;
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin: auto;
 }
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .flex--centro {
-	align-items: center;
-	justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex--coluna {
-	flex-direction: column;
+  flex-direction: column;
+}
+
+.link{
+  color:blue;
+  text-decoration: underline;
 }
 
 .titulo-pagina {
-	display: flex;
-	align-items: center;
-	font-family: var(--fonte-familia-titulo-pagina);
-	font-size: var(--fonte-tamanho-titulo-pagina);
-	background-color: var(--cor-contraste-claro);
-    border-radius: 10px;
-	box-shadow: var(--sombra);
-	height: 4.75rem;
-	margin-top: 1.25rem;
-	margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  font-family: var(--fonte-familia-titulo-pagina);
+  font-size: var(--fonte-tamanho-titulo-pagina);
+  background-color: var(--cor-contraste-claro);
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+  height: 4.75rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
 }
 html {
-	scroll-behavior:smooth;
-  }
-.bold{
-	font-weight: bold;
-  }
+  scroll-behavior: smooth;
+}
+
+.bold {
+  font-weight: bold;
+}
 
 .painel-destaque {
-	display: flex;
-	align-items: center;
-	font-family: var(--fonte-familia-titulo-pagina);
-	font-size: var(--fonte-tamanho-titulo-pagina);
+  display: flex;
+  align-items: center;
+  font-family: var(--fonte-familia-titulo-pagina);
+  font-size: var(--fonte-tamanho-titulo-pagina);
 
-	height: fit-content;
-	margin-top: 0.5rem;
-	margin-bottom: 2rem;
-	
+  height: fit-content;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 
-.painel-txt{
-	font-size: 20px;
-
+.painel-txt {
+  font-size: 20px;
 }
 
-@media(min-width: 800px) {
+@media (min-width: 800px) {
   .container {
-		padding-right: 2.5rem;
-		padding-left: 2.5rem;	
-	}
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
 }
 
-@media(min-width: 1200px) {
-	.container {
-		padding-left: calc((100vw - 900px)/2);
-		padding-right: calc((100vw - 900px)/2);
-	}
+@media (min-width: 1200px) {
+  .container {
+    padding-left: calc((100vw - 900px) / 2);
+    padding-right: calc((100vw - 900px) / 2);
+  }
 }

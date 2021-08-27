@@ -72,7 +72,7 @@ const SearchBar = () => {
               list="types"
               name="type"
               id="type"
-              autoComplete={false}
+              autoComplete="off"
               placeholder="Or by type..."
               value={type}
               onChange={(event) => {

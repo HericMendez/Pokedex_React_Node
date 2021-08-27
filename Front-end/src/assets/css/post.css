@@ -4,6 +4,11 @@
   
 }
 
+.profile-title{
+  display: flex;
+  justify-content: space-between;
+}
+
 .imageid{
 	width: 100%;
 	height: auto;

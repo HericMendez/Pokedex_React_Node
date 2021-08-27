@@ -1,26 +1,63 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../assets/css/post.css";
 
 import { busca } from "../api/api";
 
-
-
-
 const PokemonProfile = () => {
   const { name } = useParams();
   const [pokemon, setPokemon] = useState([]);
+  const [list, setList] = useState([]);
 
   useEffect(() => {
     busca(`/pokemon/${name}`, setPokemon);
   }, [name]);
 
-  console.log(pokemon);
+  const url = `/list/`;
+
+  useEffect(() => {
+    busca(url, setList);
+  }, [url]);
+
+  var pos = list
+    .map(function (e) {
+      return e.name;
+    })
+    .indexOf(pokemon.name);
+  let prev = "";
+  let next = "";
+  let prevLink = "";
+  let nextLink = "";
+
+  if (pos != undefined && pos != -1) {
+    //console.log(list[pos-1])
+    //  console.log(list[pos+1])
+    //console.log(list[list.length-1])
+
+    if (pos != 0) {
+      prev = list[pos - 1].nameid;
+      prevLink = `← ${list[pos - 1].name}`;
+    }
+    if (pos < list.length - 1) {
+      next = list[pos + 1].nameid;
+      nextLink = `${list[pos + 1].name} →`;
+    }
+  }
+
   return (
     <main className="container flex flex--centro">
       <article className="cartao post fixOverlap">
         <div className="row">
-          <h3 className="cartao__titulo">{pokemon.name}</h3>
+          <div className="profile-title">
+            <p>
+              <Link to={`/pokemon/${prev}`}>{prevLink}</Link>
+            </p>
+            <h3 className="cartao__titulo">{pokemon.name}</h3>
+            <p>
+              <Link to={`/pokemon/${next}`}>{nextLink}</Link>
+            </p>
+          </div>
+
           <div className="painel flex--centro">
             <div className="col-md-6">
               <img
@@ -82,11 +119,11 @@ const PokemonProfile = () => {
                     {pokemon.name} Is super effective against:
                   </th>
                 </tr>
-                
+
                 <tr>
                   <td className="center-txt">{pokemon.superEffective}</td>
                 </tr>
-                <br/>
+                <br />
                 <tr>
                   <th className="center-txt">
                     {pokemon.name} Is not very effective against:
@@ -95,7 +132,7 @@ const PokemonProfile = () => {
                 <tr>
                   <td className="center-txt">{pokemon.notVeryEffective}</td>
                 </tr>
-                <br/>
+                <br />
                 <tr>
                   <th className="center-txt">
                     And has no effect against the types:
@@ -110,30 +147,32 @@ const PokemonProfile = () => {
               <table>
                 <tr>
                   <th>
-                    <h6 className="cartao__subtitulo blue">Defense Attributes</h6>
+                    <h6 className="cartao__subtitulo blue">
+                      Defense Attributes
+                    </h6>
                   </th>
                 </tr>
                 <tr>
                   <th className="center-txt">
-                    {pokemon.name} Is super effective against:
+                     Those types are not very effective against {pokemon.name}:
                   </th>
                 </tr>
                 <tr>
                   <td className="center-txt">{pokemon.resist}</td>
                 </tr>
-                <br/>
+                <br />
                 <tr>
                   <th className="center-txt">
-                    {pokemon.name} Is not very effective against:
+                  Are super-effective against {pokemon.name}:
                   </th>
                 </tr>
                 <tr>
                   <td className="center-txt">{pokemon.weak}</td>
                 </tr>
-                <br/>
+                <br />
                 <tr>
                   <th className="center-txt">
-                    And has no effect against the types:
+                  And it is immune agains those types:
                   </th>
                 </tr>
                 <tr>
@@ -213,5 +252,59 @@ export default PokemonProfile;
 
     </main>
     
+    
+    */
+
+/*
+    
+      const jojos = [
+    {
+      id: 100,
+      name: "Joseph",
+      stand: "Hermit Purple",
+    },
+    {
+      id: 101,
+      name: "Jotaro",
+      stand: "Star Platinum",
+    },
+    {
+      id: 102,
+      name: "Josuke",
+      stand: "Crazy Diamond",
+    },
+    {
+      id: 103,
+      name: "Giorno",
+      stand: "Gold Experience",
+    },
+    {
+      id: 104,
+      name: "Jolyne",
+      stand: "Stone Free",
+    }
+    
+  ]
+  
+var pos = jojos.map(function(e) { return e.stand}).indexOf('Hermit Purple');
+
+
+var prev = pos-1
+var next = pos+1
+
+
+function jojo(index){
+if(jojos[index].name!=""){
+	return`${jojos[index].id}: ${jojos[index].name}`
+  }
+}
+
+
+
+document.getElementById("prev").innerHTML = jojo(prev)
+document.getElementById("next").innerHTML = jojo(next)
+
+
+
     
     */

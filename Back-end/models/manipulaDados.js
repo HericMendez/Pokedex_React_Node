@@ -16,8 +16,8 @@ class ManipulaDados {
     });
   }
 
-  vaiDireto(pokemon) {
-    const sql = "INSERT INTO  Pokedata SET ?";
+  multiCadastro(pokemon) {
+    const sql = `INSERT INTO Pokedata SET ?`;
 
     conexao.query(sql, pokemon, (erro, results) => {
       if (erro) {
@@ -90,16 +90,16 @@ class ManipulaDados {
     });
   }
 
-  exibeNome(name, res) {
-    const sql = `SELECT * FROM Pokedata.Pokedata WHERE name = "${name}";`;
+  exibeNome(nameid, res) {
+    const sql = `SELECT * FROM Pokedata.Pokedata WHERE nameid = "${nameid}";`;
 
     conexao.query(sql, (erro, results) => {
-      const name = results[0];
+      const nameid = results[0];
       if (erro) {
         res.status(400).json(erro);
         console.log(erro);
       } else {
-        res.status(200).json(name);
+        res.status(200).json(nameid);
         console.log(results);
       }
     });
@@ -107,7 +107,7 @@ class ManipulaDados {
 
 
   buscaNome(name, res) {
-    const sql = `SELECT * FROM Pokedata.Pokedata WHERE name like '%${name}%';`;
+    const sql = `SELECT * FROM Pokedata.Pokedata WHERE name like "%${name}%";`;
 
     conexao.query(sql, (erro, results) => {
       const name = results;

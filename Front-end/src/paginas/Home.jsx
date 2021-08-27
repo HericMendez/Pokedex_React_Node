@@ -10,12 +10,12 @@ function send(dados) {
 const Home = () => {
   return (
     <main >
-     <div style={{marginBottom: "100px"}}>
+     <div style={{marginBottom: "80px"}}>
      <br/>
     </div>
     <div className="container">
       <div>
-       <h1 className="painel-destaque flex--centro">Welcome to the Pokémon Center!</h1>
+       <h1 className="titulo-pagina  flex--centro">Welcome to the Kanto Pokédex!</h1>
       </div>
      
       

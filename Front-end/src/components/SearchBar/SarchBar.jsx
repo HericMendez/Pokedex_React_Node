@@ -1,86 +1,97 @@
 import { useState } from "react";
+
 import "./searchbar.css";
-//import { Dropdown, Menu,  } from 'semantic-ui-react'
-import Dropdown from "react-dropdown";
-import "react-dropdown/style.css";
 
 import PokeList from "../PokeList/PokeList";
 
-const SearchBar = ({ send }) => {
+const SearchBar = () => {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
-  const [gen, setGen] = useState("");
 
+  const [resultMsg1, setResultMsg1] = useState("");
+  const [resultMsg2, setResultMsg2] = useState("");
+
+  const [clearBtn, setClearBtn] = useState("");
+
+
+
+var hr = '<hr/>'
 
 
   return (
     <>
       <div className="container">
-        <h2 className="titulo-pagina">
+        <h2 className="titulo-pagina  flex--centro">
           <form
             className="input-form"
-            onSubmit={(event) => {
+            onChange={(event) => {
               event.preventDefault();
-              console.log(name);
-              //send(name)
+              console.log(event.target.value);
             }}
-            onBlur={(event)=>{
-              setType(event.target.value = "")
-
+            onBlur={(event) => {
+              setName((event.target.value = ""));
+              setType((event.target.value = ""));
             }}
           >
             <input
               className="input-search"
               value={name}
+              autoComplete="off"
               onChange={(event) => {
-                
-
                 //setLink(`/search/${name}`);
+
                 setName(event.target.value);
-              
+                setClearBtn( <button className="blue" onClick={()=>window.location.reload()}> Clear Results </button>)
+
+                /*
+                             if (event.target.value != "") {
+                  setResultMsg1(`Showing results for ${event.target.value}`);
+                } else {
+                  setResultMsg1("");
+                }
+                */
+                if (event.target.value != "") {
+                  setResultMsg1(
+                    `Showing results for "${event.target.value}"`
+                  );
+                  
+                } else {
+                  setResultMsg1("");
+                }
+   
               }}
               type="text"
               id="name"
               placeholder="Search Pokémon by name..."
             />
-                        <input
-            className="type-search"
+            <input
+              className="input-search"
+              type="input"
               list="types"
               name="type"
               id="type"
+              autoComplete={false}
               placeholder="Or by type..."
               value={type}
-              
               onChange={(event) => {
                 setType(event.target.value);
-   
+                setClearBtn( <button className="blue" onClick={()=>window.location.reload()}> Clear Results </button>)
 
+                if (event.target.value != "") {
+                  setResultMsg2(
+                    //cartao-post--${firstType(post.type)}`
+                    `Showing results for ${event.target.value} type Pokémon`
+                  );
+                 
+                } else {
+                  setResultMsg2("");
+                }
               }}
-
-              
             />
-            <input
-              className="type-search"
-              list="generations" 
-              value={gen}
-
-              onChange={(event) => {
-                setGen(event.target.value);
-                setType("")
-                setName("")
-
-              }}
-              
-              id="gen"
-              placeholder="Or by gen..."
-
-              
-            />
-
 
             <datalist id="types">
-              <option default value="Normal "/>
-              <option value="Fire " />
+              <option default value="Normal " />
+              <option name="fire" value="Fire" />
               <option value="Water " />
               <option value="Grass " />
               <option value="Flying " />
@@ -98,23 +109,26 @@ const SearchBar = ({ send }) => {
               <option value="Dark " />
               <option value="Fairy " />
             </datalist>
-
-            <datalist id="generations">
-
-              <option id="1" value="1" />
-              <option id="2" value="2" />
-              <option id="3" value="3" />
-             
-            </datalist>
           </form>
+          
         </h2>
+        <div className="container flex flex--centro" style={{marginTop: "-20px"}}>
+           <span className="cartao__texto ">
+        {resultMsg1}<br/><hr/>{resultMsg2} <br/>{clearBtn}
+      </span>
+        </div>
+    
+
       </div>
-
-      <PokeList url={`/search/${name}`} />
+ 
+      <PokeList url={`/list/name/${name}`} />
+      <br/>
+      <br/>
+      <br/>
+              
       <PokeList url={`/list/type/${type}`} />
-      <PokeList url={`/list/gen/${gen} `} />
+      <br/>
 
-      {console.log(`/list/gen/${gen}`)}
     </>
   );
 };

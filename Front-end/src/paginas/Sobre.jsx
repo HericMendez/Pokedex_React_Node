@@ -1,6 +1,6 @@
 import '../assets/css/componentes/cartao.css'
 
-import { busca } from '../api/api';
+
 
 const Sobre = () => {
   
@@ -14,14 +14,14 @@ const Sobre = () => {
       </div>
     <section className="container flex flex--centro">
       
-        <article className="cartao">
-          <p>
-             O projeto Pokédex-React-Node é um projeto desenvolvido para fins didáticos,
-          com o objetivo de aprender e aplicar as tecnologias React.js e Node.js
+        <article className="cartao post">
+          <p className="flex flex--centro">
+
+Pokédex-React-Node is a project developed for educational purposes, with the objective of learning and applying the React.js and Node.js technologies.
           </p>
           <br></br>
           <p>
-           <a target='_blank' rel='noreferrer' href='https://github.com/HericMendez/Pokedex_React_Node'><strong>Link para o projeto no GitHub</strong></a>
+           <a className="red" target='_blank' rel='noreferrer' href='https://github.com/HericMendez/Pokedex_React_Node/tree/save-point'><strong>Link to the Github repository</strong></a>
           </p>
          
 

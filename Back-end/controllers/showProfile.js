@@ -9,9 +9,9 @@ module.exports = (app) => {
 
   //Busca pokémons pelo nome (Rota GET):
   app.get("/pokemon/:name", (req, res) => {
-    const name = req.params.name;
+    const nameid = req.params.name;
 
-    nameCap = primeiraLetraMaiuscula(name);
+    nameCap = primeiraLetraMaiuscula(nameid);
     ManipulaDados.exibeNome(nameCap, res);
   });
 

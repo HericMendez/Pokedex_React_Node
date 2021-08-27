@@ -17,7 +17,7 @@ const NavBar = () => {
         <ul className="menu-itens">
           
           <li><Link to="/" className="menu-item menu-item--entrar">Home</Link></li>
-          <li><Link to="/list" className="menu-item">Pokémon List</Link></li>
+          <li><a href="/list" className="menu-item">Pokémon List</a></li>
           <li><Link to="/about" className="menu-item">About</Link></li>
          
 

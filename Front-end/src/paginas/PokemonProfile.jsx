@@ -3,7 +3,9 @@ import { useParams } from "react-router-dom";
 import "../assets/css/post.css";
 
 import { busca } from "../api/api";
-import { red } from "@material-ui/core/colors";
+
+
+
 
 const PokemonProfile = () => {
   const { name } = useParams();

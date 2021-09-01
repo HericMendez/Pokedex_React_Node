@@ -43,7 +43,7 @@ const SearchBar = () => {
                 //setLink(`/search/${name}`);
 
                 setName(event.target.value);
-                setClearBtn( <button className="red" onClick={()=>window.location.reload()}> Clear Results </button>)
+                setClearBtn( <button className="clear-btn" onClick={()=>window.location.reload()}> Clear Results </button>)
 
                 /*
                              if (event.target.value != "") {
@@ -77,7 +77,7 @@ const SearchBar = () => {
               value={type}
               onChange={(event) => {
                 setType(event.target.value);
-                setClearBtn( <button className="red" onClick={()=>window.location.reload()}> Clear Results </button>)
+                setClearBtn( <button className="clear-btn" onClick={()=>window.location.reload()}> Clear Results </button>)
 
                 if (event.target.value != "") {
                   setResultMsg2(

@@ -14,7 +14,7 @@ const PokemonProfile = () => {
   }, [name]);
 
   const url = `/list/`;
-
+  console.log(pokemon)
   useEffect(() => {
     busca(url, setList);
   }, [url]);
@@ -53,6 +53,8 @@ const PokemonProfile = () => {
               <Link to={`/pokemon/${prev}`}>{prevLink}</Link>
             </p>
             <h3 className="cartao__titulo">{pokemon.name}</h3>
+            {console.log({name})}
+            {console.log(pokemon.name)}
             <p>
               <Link to={`/pokemon/${next}`}>{nextLink}</Link>
             </p>

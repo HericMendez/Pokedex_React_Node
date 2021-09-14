@@ -2,10 +2,6 @@
 
 import SearchBar from "../components/SearchBar/SarchBar";
 
-function send(dados) {
-  return dados;
-}
-
 
 const Home = () => {
   return (
@@ -17,12 +13,6 @@ const Home = () => {
       <div>
        <h1 className="titulo-pagina  flex--centro">Welcome to the Kanto Pokédex!</h1>
       </div>
-     
-      
-
-        
-      
-
 
 
     </div>
@@ -31,6 +21,5 @@ const Home = () => {
   );
 };
 
-console.log(send());
 
 export default Home;
